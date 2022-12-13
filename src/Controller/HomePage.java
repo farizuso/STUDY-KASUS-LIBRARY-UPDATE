@@ -1,4 +1,9 @@
+package Controller;
+
+import Controller.BukuPage;
+
 import java.util.Scanner;
+
 
 public class HomePage {
     private Scanner input = new Scanner(System.in);

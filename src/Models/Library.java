@@ -1,24 +1,21 @@
+package Models;
+
+import Entity.Buku;
+import Entity.Staff;
+
+
+
 import java.util.ArrayList;
 
 public class Library {
-    static ArrayList<Buku> dataBuku = new ArrayList<>();
-    static ArrayList<Staff> staffAktif = new ArrayList<>();
+    public static ArrayList<Buku> dataBuku = new ArrayList<>();
+    public static ArrayList<Staff> staffAktif = new ArrayList<>();
     public static int banyakData() {
         return dataBuku.size();
     }
-//    public static void initialBuku() {
-//        Penulis penulis = new Penulis("Agus Budi Cahyani");
-//        Penerbit penerbit = new Penerbit("PT Cetak Buku");
-//        Buku buku1 = new Buku("Judul 1", 123, "01/01/2000", penulis, penerbit, true);
-//
-//        Buku buku2 = new Buku("Judul 2", 200, "01/01/2000", null, null, true);
-//
-//        dataBuku.add(buku1);
-//        dataBuku.add(buku2);
-//    }
     public static Staff findStaff(String nik) {
         for (Staff staff : staffAktif) {
-            if (staff.nik.equals(nik)) {
+            if (staff.getNik().equals(nik)) {
                 return staff;
             }
         }
@@ -33,7 +30,7 @@ public class Library {
 
     public static Buku findBukuById(int idbuku) {
         for (Buku buku : dataBuku) {
-            if (buku.idKoleksi==(idbuku)){
+            if (buku.getIdKoleksi()==(idbuku)){
 
                 return buku;
             }
@@ -43,7 +40,7 @@ public class Library {
 
     public static int indexData(Buku buku) {
         for (int i = 0;i<dataBuku.size();i++){
-            if (dataBuku.get(i).idKoleksi==buku.idKoleksi){
+            if (dataBuku.get(i).getIdKoleksi()==buku.getIdKoleksi()){
                 return i;
             }
         }
@@ -52,7 +49,7 @@ public class Library {
 
     public static Buku findBukuByTitle(String judul) {
         for (Buku buku : dataBuku) {
-            if (buku.judul.contains(judul)){
+            if (buku.getJudul().contains(judul)){
                 return buku;
             }
         }
@@ -76,7 +73,7 @@ public class Library {
         ArrayList<Buku>_bukuFound = new ArrayList<>();
 
         for (Buku buku : dataBuku){
-            if (buku.judul.contains(judulBuku)){
+            if (buku.getJudul().contains(judulBuku)){
 
                 _bukuFound.add(buku);
             }

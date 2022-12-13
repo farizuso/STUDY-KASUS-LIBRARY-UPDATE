@@ -1,3 +1,8 @@
+package Controller;
+
+import Controller.Auth;
+import Controller.HomePage;
+
 import java.util.Scanner;
 public class LoginPage {
     private Scanner input = new Scanner(System.in);
@@ -19,7 +24,7 @@ public class LoginPage {
         password = input.nextLine();
         System.out.println("---------------------------------");
 
-//        boolean statusLogin = Auth.login(nik,password);
+//        boolean statusLogin = Controller.Auth.login(nik,password);
 
         if (Auth.login(nik,password)){
             new HomePage();

@@ -1,6 +1,10 @@
-public class Staff extends Akun{
+package Entity;
 
-    String NamaStuff;
+import Entity.Akun;
+
+public class Staff extends Akun {
+
+   private String NamaStuff;
 
     public Staff(String namaStuff, String nik, String password) {
         this.NamaStuff = namaStuff;

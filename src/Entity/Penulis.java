@@ -1,6 +1,9 @@
+package Entity;
+
+import Entity.Identitas;
+
 public class Penulis extends Identitas {
-//    String NamaPenulis;
-    String emailPenulis;
+   private String emailPenulis;
 
     public Penulis(String namaPenulis) {
         this.nama = namaPenulis;
@@ -12,7 +15,10 @@ public class Penulis extends Identitas {
     }
 
     public void dataPenulis() {
-        System.out.println("Nama Penulis    : " + nama);
-        System.out.println("Email Penulis   : " +emailPenulis);
+        System.out.println("Nama Entity.Penulis    : " + nama);
+        System.out.println("Email Entity.Penulis   : " +emailPenulis);
+    }
+    public String getEmailPenulis() {
+        return emailPenulis;
     }
 }

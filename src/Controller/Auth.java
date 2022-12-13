@@ -1,3 +1,8 @@
+package Controller;
+
+import Entity.Staff;
+import Models.*;
+
 public class Auth {
    static Staff staffLogged = null;
 
@@ -12,7 +17,7 @@ public class Auth {
        Staff staff = Library.findStaff(nik);
 
        if (staff != null){
-           if (staff.password.equals(password)){
+           if (staff.getPassword().equals(password)){
                staffLogged = staff;
                return true;
            }else {
