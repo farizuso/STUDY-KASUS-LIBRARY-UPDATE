@@ -1,7 +1,6 @@
-package Controller;
+package views;
 
-import Controller.Auth;
-import Controller.HomePage;
+import models.Auth;
 
 import java.util.Scanner;
 public class LoginPage {
@@ -23,8 +22,6 @@ public class LoginPage {
         System.out.print("Password  :");
         password = input.nextLine();
         System.out.println("---------------------------------");
-
-//        boolean statusLogin = Controller.Auth.login(nik,password);
 
         if (Auth.login(nik,password)){
             new HomePage();

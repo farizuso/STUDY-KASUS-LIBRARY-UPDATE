@@ -1,6 +1,6 @@
-package Controller;
+package views;
 
-import Controller.BukuPage;
+import views.BukuPage;
 
 import java.util.Scanner;
 

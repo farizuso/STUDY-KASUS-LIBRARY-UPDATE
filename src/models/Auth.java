@@ -1,13 +1,13 @@
-package Controller;
+package models;
 
-import Entity.Staff;
-import Models.*;
+import entity.Staff;
+import models.*;
 
 public class Auth {
-   static Staff staffLogged = null;
+   public static Staff staffLogged = null;
 
    public static void initialStaff(){
-       Staff staff1 = new Staff("fariz","07457","888321");
+       Staff staff1 = new Staff("Poseidon","07457","888321");
        Staff staff2 = new Staff("akbar","12345","123");
 
        Library.staffAktif.add(staff1);
@@ -26,6 +26,14 @@ public class Auth {
        }
        return false;
    }
+
+    public static Staff getStaffLogged() {
+        return staffLogged;
+    }
+
+    public static void setUserLogged(Staff staffLogged) {
+        Staff.staffLogged = staffLogged;
+    }
    public static void logout(){
      staffLogged = null;
    }

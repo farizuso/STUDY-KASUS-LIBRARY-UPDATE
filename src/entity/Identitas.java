@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 public class Identitas {
    protected String nama;
@@ -10,4 +10,5 @@ public class Identitas {
     public void setNama(String nama) {
         this.nama = nama;
     }
+
 }

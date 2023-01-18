@@ -1,7 +1,7 @@
-package Models;
+package models;
 
-import Entity.Buku;
-import Entity.Staff;
+import entity.Buku;
+import entity.Staff;
 
 
 
@@ -9,11 +9,18 @@ import java.util.ArrayList;
 
 public class Library {
     public static ArrayList<Buku> dataBuku = new ArrayList<>();
+
+    public  static ArrayList<Buku> getDataBuku(){
+        return dataBuku;
+    }
     public static ArrayList<Staff> staffAktif = new ArrayList<>();
     public static int banyakData() {
         return dataBuku.size();
     }
-    public static Staff findStaff(String nik) {
+
+
+
+        public static Staff findStaff(String nik) {
         for (Staff staff : staffAktif) {
             if (staff.getNik().equals(nik)) {
                 return staff;
@@ -79,5 +86,8 @@ public class Library {
             }
         }
         return _bukuFound;
+    }
+    public static void delete(int index) {
+        dataBuku.remove(index);
     }
 }

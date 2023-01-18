@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 public class Akun {
     protected String nik;
@@ -13,5 +13,13 @@ public class Akun {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setNik(String nik) {
+        this.nik = nik;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

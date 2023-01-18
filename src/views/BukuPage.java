@@ -1,9 +1,9 @@
-package Controller;
+package views;
 
-import Entity.Buku;
-import Entity.Penerbit;
-import Entity.Penulis;
-import Models.*;
+import entity.Buku;
+import entity.Penerbit;
+import entity.Penulis;
+import models.*;
 
 
 import java.util.Scanner;
@@ -16,8 +16,8 @@ public class BukuPage {
         Penerbit penerbit = buku.getPenerbit();
 
         System.out.println("---------------------------------------");
-        System.out.println("ID Entity.Buku         :"+buku.getIdKoleksi());
-        System.out.println("Judul Entity.Buku      :"+buku.getJudul());
+        System.out.println("ID Buku         :"+buku.getIdKoleksi());
+        System.out.println("Judul Buku      :"+buku.getJudul());
         System.out.println("Jumlah Halaman  :"+buku.getHalaman());
         if (penulis != null){
             System.out.println("Nama Penulis    :"+penulis.getNama());
@@ -41,7 +41,7 @@ public class BukuPage {
         System.out.println("=======================================");
 
         System.out.print("Lanjut....");
-        input.nextLine();
+
         System.out.println();
     }
     public void tambahBuku() {
@@ -52,7 +52,7 @@ public class BukuPage {
         Penerbit penerbit = null;
 
         System.out.println("============ TAMBAH BUKU ============");
-        System.out.print("Judul Entity.Buku          :");
+        System.out.print("Judul Buku          :");
         judul = input.nextLine();
 
         System.out.print("Jumlah Halaman      :");
@@ -89,19 +89,19 @@ public class BukuPage {
         Buku bukuBaru = new Buku(judul,halaman,tanggalterbit, penulis,penerbit,true);
         Library.tambahBuku(bukuBaru);
 
-        System.out.println("Berhasil Menambahkan Entity.Buku");
+        System.out.println("Berhasil Menambahkan Buku");
 
         System.out.println("=======================================");
 
         System.out.print("Lanjut ...");
-        input.nextLine();
+
         System.out.println();
     }
     public void editBuku(Buku buku, int pilihEdit) {
         switch (pilihEdit) {
             case 1:
                 String judulBukuBaru;
-                System.out.println("Judul Entity.Buku          : " + buku.getJudul());
+                System.out.println("Judul Buku          : " + buku.getJudul());
                 System.out.print("Masukan Judul Baru  : ");
                 judulBukuBaru = input.nextLine();
                 buku.setJudul(judulBukuBaru);
@@ -119,7 +119,7 @@ public class BukuPage {
         System.out.println("Berhasil mengubah data buku");
 
         System.out.println("Lanjut....");
-        input.nextLine();
+
         System.out.println();
     }
 
@@ -129,7 +129,7 @@ public class BukuPage {
 
         int pilihEdit;
         System.out.print("""
-                1. Judul Entity.Buku
+                1. Judul Buku
                 2. Jumlah Halaman
                 3. Tanggal Terbit
                 4. Entity.Penulis
